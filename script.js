@@ -30,7 +30,7 @@ function addNewAQField() {
 
 //generating CV
 function generateCV(e){
-    e.preventdefault();
+    e.preventDefault();
   //  console.log("generating cv");
   let nameField = document.getElementById("nameField").value;
 
@@ -105,3 +105,4 @@ function printCV(){
     window.print();
 }
 
+document.getElementById("generate-cv").onsubmit = (e) => generateCV(e);
