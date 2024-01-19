@@ -29,8 +29,8 @@ function addNewAQField() {
 }
 
 //generating CV
-function generateCV(){
-
+function generateCV(e){
+    e.preventdefault();
   //  console.log("generating cv");
   let nameField = document.getElementById("nameField").value;
 
