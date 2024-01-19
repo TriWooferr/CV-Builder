@@ -15,85 +15,87 @@
     <div class="container" id="cv-form">
         <h1 class="text-center my-2" >Resume Generator</h1>
 
-        <div class="row">
-            <div class="col-md-6">
-                    <!--first col-->
-                <h3>Personal Information</h3>
-
-                <div class="form-group">
-                    <label for="nameField">Name</label>
-                    <input type="text" id="nameField" placeholder="Enter Here" class="form-control">
-                </div>
+        <form onsubmit="generateCV()">
+            <div class="row">
+                <div class="col-md-6">
+                        <!--first col-->
+                    <h3>Personal Information</h3>
+    
+                    <div class="form-group">
+                        <label for="nameField">Name</label>
+                        <input type="text" id="nameField" placeholder="Enter Here" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="contactField">Contact</label>
+                        <input type="text" id="contactField" placeholder="Enter Here" class="form-control">
+                    </div>
                 <div class="form-group mt-2">
-                    <label for="contactField">Contact</label>
-                    <input type="text" id="contactField" placeholder="Enter Here" class="form-control">
+                    <label for="addressField">Address</label>
+                    <textarea  id="addressField" placeholder="Enter Here" class="form-control" rows="5"></textarea>
                 </div>
-            <div class="form-group mt-2">
-                <label for="addressField">Address</label>
-                <textarea  id="addressField" placeholder="Enter Here" class="form-control" rows="5"></textarea>
-            </div>
-
-            <div class="form-group mt-3">
-                <label for="">Select your photo</label>
-
-                <input id="imgField" type="file" accept="image/png, image/gif, image/jpeg, image/jpg" class="form-control" required>
-            </div>
-
-            <p class="text-secondary my-3">Important Links</p>
-            
-
-            <div class="form-group mt-2">
-                <label for="fbField">Facebook</label>
-                <input type="text" id="fbField" placeholder="Enter Here" class="form-control">
-            </div>
-
-            <div class="form-group mt-2">
-                <label for="LinkedInField">LinkedIn</label>
-                <input type="text" id="LinkedInField" placeholder="Enter Here" class="form-control">
-            </div>
-
-            <div class="form-group mt-2">
-                <label for="instaField">Instagram</label>
-                <input type="text" id="instaField" placeholder="Enter Here" class="form-control">
-            </div>
-            </div>
-
-            <div class="col-md-6">
-                    <!--second col-->
-                <h3>Professional Information</h3>
-
+    
+                <div class="form-group mt-3">
+                    <label for="">Select your photo</label>
+    
+                    <input id="imgField" type="file" required accept="image/png, image/gif, image/jpeg, image/jpg" class="form-control">
+                </div>
+    
+                <p class="text-secondary my-3">Important Links</p>
+                
+    
                 <div class="form-group mt-2">
-                    <label for="">Objective</label>
-                    <textarea id="ObjectiveField" rows="5"   placeholder="Enter Here" class="form-control"></textarea>
+                    <label for="fbField">Facebook</label>
+                    <input type="text" id="fbField" placeholder="Enter Here" class="form-control">
                 </div>
-
-
-                <div class="form-group mt-2" id="we">
-                    <label for="">Work Experience</label>
-                    <textarea rows="3"   placeholder="Enter Here" class="form-control weField"></textarea>
-
-                    <!--new text area-->
-
-                    <div class="container text-center mt-2" id="weAddButton">
-                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+    
+                <div class="form-group mt-2">
+                    <label for="LinkedInField">LinkedIn</label>
+                    <input type="text" id="LinkedInField" placeholder="Enter Here" class="form-control">
+                </div>
+    
+                <div class="form-group mt-2">
+                    <label for="instaField">Instagram</label>
+                    <input type="text" id="instaField" placeholder="Enter Here" class="form-control">
+                </div>
+                </div>
+    
+                <div class="col-md-6">
+                        <!--second col-->
+                    <h3>Professional Information</h3>
+    
+                    <div class="form-group mt-2">
+                        <label for="">Objective</label>
+                        <textarea id="ObjectiveField" rows="5"   placeholder="Enter Here" class="form-control"></textarea>
+                    </div>
+    
+    
+                    <div class="form-group mt-2" id="we">
+                        <label for="">Work Experience</label>
+                        <textarea rows="3"   placeholder="Enter Here" class="form-control weField"></textarea>
+    
+                        <!--new text area-->
+    
+                        <div class="container text-center mt-2" id="weAddButton">
+                            <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+    
+    
+                    <div class="form-group mt-2" id="aq">
+                        <label for="">Academic Qualification</label>
+                        <textarea rows="3"   placeholder="Enter Here" class="form-control aqField"></textarea>
+    
+                        <div class="container text-center mt-2" id="aqAddButton">
+                            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
                     </div>
                 </div>
-
-
-                <div class="form-group mt-2" id="aq">
-                    <label for="">Academic Qualification</label>
-                    <textarea rows="3"   placeholder="Enter Here" class="form-control aqField"></textarea>
-
-                    <div class="container text-center mt-2" id="aqAddButton">
-                        <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
-                    </div>
-                </div>
             </div>
-        </div>
-
-        <div class="container text-center mt-3">
-            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
-        </div>
+    
+            <div class="container text-center mt-3">
+                <input class="btn btn-primary btn-lg" type="submit" value="Generate CV">
+            </div>
+        </form>
     </div>
 
     <!--cv tempelate-->
